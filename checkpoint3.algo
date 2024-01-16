@@ -1,0 +1,19 @@
+ALGORITHM algorithm_name
+VAR
+    array:ARRAY_INTEGER;
+    i,n,j,key:INTEGER;
+
+BEGIN
+    arr:=[5,2,8,4,3];
+FOR i FROM 1 TO arr.length-1 STEP 1 DO
+    KEY:=arr[i];
+    j:=i-1;
+WHILE (j>=0 and array[j]>key) DO
+    arr[j+1]=arr[j];
+    j:=j-1
+END_WHILE
+    arr[j + 1]:= key;
+END_FOR
+    Write(arr);
+END_FOR
+END
